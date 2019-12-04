@@ -1,0 +1,71 @@
+{
+  "name": "feed-db-importer",
+  "version": "0.0.2",
+  "description": "Import feeds to feed DB.",
+  "main": "index.js",
+  "bin": {
+    "feed-db-import": "index.js",
+    "feed-db-importer": "index.js"
+  },
+  "scripts": {
+    "demo": "feed-db-import",
+    "lint": "xo",
+    "lint:fix": "xo --fix",
+    "test": "mocha test.js",
+    "test:cov": "nyc npm run test",
+    "test:loop": "while npm test --silent; do :; done"
+  },
+  "dependencies": {
+    "fs-extra": "^8.1.0",
+    "node-read-yaml": "0.0.1",
+    "opmlparser": "^0.8.0"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
+    "mocha": "^6.2.1",
+    "feed-db-importer": "file:.",
+    "nyc": "^14.1.1",
+    "xo": "^0.25.3"
+  },
+  "keywords": [
+    "cli",
+    "foo",
+    "bar"
+  ],
+  "files": [
+    "index.js",
+    "read-opml.js",
+    "LICENSE",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=8.6.0"
+  },
+  "author": "dailyrandomphoto <dailyrandomphoto@gmail.com> (https://www.dailyrandomphoto.com/)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dailyrandomphoto/feed-db-importer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dailyrandomphoto/feed-db-importer/issues"
+  },
+  "homepage": "https://github.com/dailyrandomphoto/feed-db-importer#readme",
+  "xo": {
+    "space": 2,
+    "rules": {
+      "promise/prefer-await-to-then": 0,
+      "capitalized-comments": 0
+    },
+    "overrides": [
+      {
+        "files": "test.js",
+        "envs": [
+          "node",
+          "mocha"
+        ]
+      }
+    ]
+  }
+}
