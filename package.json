@@ -16,7 +16,7 @@
     "test:loop": "while npm test --silent; do :; done"
   },
   "dependencies": {
-    "fs-extra": "^8.1.0",
+    "fs-extra": "^9.0.1",
     "node-read-yaml": "0.0.1",
     "opmlparser": "^0.8.0"
   },
