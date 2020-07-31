@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "fs-extra": "^8.1.0",
-    "node-read-yaml": "0.0.1",
+    "node-read-yaml": "1.0.1",
     "opmlparser": "^0.8.0"
   },
   "devDependencies": {
