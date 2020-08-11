@@ -1,6 +1,5 @@
 'use strict';
 
-const {URL} = require('url');
 const fs = require('fs-extra');
 const OpmlParser = require('opmlparser');
 

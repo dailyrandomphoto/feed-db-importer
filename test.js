@@ -3,7 +3,7 @@
 const chai = require('chai');
 chai.use(require('chai-as-promised'));
 const {expect} = chai;
-const main = require('feed-db-importer');
+const main = require('.');
 
 describe('feed-db-importer', () => {
   it('module should to be a function', () => {
