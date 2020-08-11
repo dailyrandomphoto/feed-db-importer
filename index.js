@@ -5,7 +5,7 @@
 const {resolve, extname} = require('path');
 const fs = require('fs-extra');
 const readYamlFile = require('node-read-yaml');
-const {readOpmlFile} = require('feed-db-importer/read-opml.js');
+const {readOpmlFile} = require('./read-opml.js');
 const TEMP_PATH = resolve(process.cwd(), './dist/feed-db.json');
 const DEST_PATH = resolve(process.cwd(), './feed-db.json');
 const urlAlias = url => {
