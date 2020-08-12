@@ -9,8 +9,8 @@
   },
   "scripts": {
     "demo": "feed-db-import",
-    "lint": "xo",
-    "lint:fix": "xo --fix",
+    "lint": "prettier --write . && xo",
+    "lint:fix": "prettier --write . && xo --fix",
     "test": "mocha test.js",
     "test:cov": "nyc npm run test",
     "test:loop": "while npm test --silent; do :; done"
@@ -25,6 +25,7 @@
     "chai-as-promised": "^7.1.1",
     "mocha": "^8.1.1",
     "nyc": "^15.1.0",
+    "prettier": "^2.0.5",
     "xo": "^0.33.0"
   },
   "keywords": [
@@ -53,6 +54,7 @@
   "homepage": "https://github.com/dailyrandomphoto/feed-db-importer#readme",
   "xo": {
     "space": 2,
+    "prettier": true,
     "rules": {
       "promise/prefer-await-to-then": 0,
       "capitalized-comments": 0

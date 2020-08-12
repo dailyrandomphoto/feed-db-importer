@@ -4,7 +4,7 @@ const fs = require('fs-extra');
 const OpmlParser = require('opmlparser');
 
 function getFeedList(xml) {
-  return new Promise(((resolve, reject) => {
+  return new Promise((resolve, reject) => {
     const opmlparser = new OpmlParser();
     const list = [];
     opmlparser.on('error', reject);
@@ -19,7 +19,7 @@ function getFeedList(xml) {
         if (url) {
           try {
             url = new URL(url).href;
-          } catch (_) {
+          } catch {
             // Skip if it's a invalid url
             continue;
           }
@@ -39,12 +39,11 @@ function getFeedList(xml) {
     });
 
     opmlparser.end(xml);
-  }));
+  });
 }
 
 function readOpmlFile(opmlfile) {
-  return fs.readFile(opmlfile)
-    .then(getFeedList);
+  return fs.readFile(opmlfile).then(getFeedList);
 }
 
-module.exports = {getFeedList, readOpmlFile};
+module.exports = { getFeedList, readOpmlFile };
